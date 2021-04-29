@@ -5,12 +5,8 @@ This app contains information about any party providers that people need to plan
 
 ## Wireframes
 
-![erb](assets/welcomepage.png)
-![erb](assets/signup.png)
-![erb](assets/login.png)
-![erb](assets/alllistings.png)
-![erb](assets/singlelisting.png)
-![erb](assets/editdelete.png)
+<img src=./assets/welcomepage.png  width="220" height="140">
+<img src=./assets/signup.png  width="220" height="140"><img src=./assets/login.png  width="220" height="140"><img src=./assets/alllistings.png  width="220" height="140"><img src=./assets/singlelisting.png  width="220" height="140"><img src=./assets/editdelete.png  width="220" height="140">
 
 ## User stories
 
