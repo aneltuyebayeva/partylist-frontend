@@ -5,12 +5,12 @@ This app contains information about any party providers that people need to plan
 
 ## Wireframes
 
-<img src=./assets/welcomepage.png  width="320" height="240">
-<img src=./assets/signup.png  width="320" height="240">
-<img src=./assets/login.png  width="320" height="240">
-<img src=./assets/alllistings.png  width="320" height="240">
-<img src=./assets/singlelisting.png  width="320" height="240">
-<img src=./assets/editdelete.png  width="320" height="240">
+<img src=./assets/welcomepage.png  width="340" height="240">
+<img src=./assets/signup.png  width="340" height="240">
+<img src=./assets/login.png  width="340" height="240">
+<img src=./assets/alllistings.png  width="340" height="240">
+<img src=./assets/singlelisting.png  width="340" height="240">
+<img src=./assets/editdelete.png  width="340" height="240">
 
 ## User stories
 
