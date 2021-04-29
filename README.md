@@ -5,12 +5,12 @@ This app contains information about any party providers that people need to plan
 
 ## Wireframes
 
-<img src=./assets/welcomepage.png  width="220" height="140">
-<img src=./assets/signup.png  width="220" height="140">
-<img src=./assets/login.png  width="220" height="140">
-<img src=./assets/alllistings.png  width="220" height="140">
-<img src=./assets/singlelisting.png  width="220" height="140">
-<img src=./assets/editdelete.png  width="220" height="140">
+<img src=./assets/welcomepage.png  width="320" height="240">
+<img src=./assets/signup.png  width="320" height="240">
+<img src=./assets/login.png  width="320" height="240">
+<img src=./assets/alllistings.png  width="320" height="240">
+<img src=./assets/singlelisting.png  width="320" height="240">
+<img src=./assets/editdelete.png  width="320" height="240">
 
 ## User stories
 
@@ -44,7 +44,7 @@ This app contains information about any party providers that people need to plan
 
 ## Frontend components tree
 
-<img src=./assets/tree.png  width="220" height="140">
+<img src=./assets/tree.png  width="320" height="240">
 
 ## MVP checklist
 
