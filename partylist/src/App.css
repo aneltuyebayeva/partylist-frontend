@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+.social-container {
+    background: #eee;
+    padding: 25px 50px;
+  }
+
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+
+  a.youtube {
+    color: #eb3223;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+  }
+  
+  a.twitter {
+    color: #49a1eb;
+  }
+  
+  a.instagram {
+    color: black;
+  }
+
+  .navbar {
+      text-align: end;
+      padding: 30px;
+     
+  }
+
+  .navLinks {
+      padding: 20px;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-size: 20px;
+  }
+
+  .categoriesContainer{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      font-family: 'Alegreya Sans', sans-serif;
+      height: 500px;
+    width: 100%;
+  }
+
+  .categories {
+      border: 1px solid black;
+      height: 200px;
+      width: 200px;
+      margin: 10px;
+  }
+
+  .categoriesTitle {
+      text-align: center;
+      font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  .homePage {
+    border: 1px solid black;
+    height: 500px;
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  .footer {
+    border: 1px solid black;
+    height: 50px;
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    text-align: center;
+  }

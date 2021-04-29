@@ -9,6 +9,7 @@ import MyListings from './pages/MyListings';
 import CreateListing from './pages/CreateListing';
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import SocialFollow from "./components/SocialFollow"
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           return <CreateListing />
         }}
       />
+      
     </div>
   );
 }

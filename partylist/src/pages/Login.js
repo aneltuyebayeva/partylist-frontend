@@ -14,7 +14,7 @@ const Login = () => {
   const loginForm = (e) => {
       e.preventDefault()
       
-      axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, {email, password})
+      axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/login`, {email, password})
       .then((response) => {
           console.log(response)
           localStorage.setItem('userId', response.data.id)

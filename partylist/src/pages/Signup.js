@@ -15,7 +15,7 @@ const Signup = () => {
     const submitForm = (e) => {
         e.preventDefault()
 
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/signup`, {email, password})
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, {email, password})
         .then((response) => {
             console.log(response)
             localStorage.setItem('userId', response.data.user.id)

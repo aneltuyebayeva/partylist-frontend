@@ -9,22 +9,34 @@ const Navbar = () => {
 
 
     return (
-        <nav>
-            <Link to="/">Home</Link>{' | '}
+        <nav className="navbar">
+            <span className="navLinks">
+            <Link to="/">Home</Link>
+            </span>
             {localStorage.getItem('userId') ?     
             <span>
-            <Link to="/listings">All Listings</Link>{' | '}
-            <Link to="/mylistings">My Listings</Link>{' | '}
-            <Link to="/create">Create</Link>{' | '}
-            <span onClick ={() => {
+                <span className="navLinks">
+                <Link to="/listings">All Listings</Link>
+                </span>
+                <span className="navLinks">
+                <Link to="/mylistings">My Listings</Link>
+                </span>
+                <span className="navLinks">
+                <Link to="/create">Create</Link>
+                </span>
+                <span className="navLinks" onClick ={() => {
                localStorage.removeItem('userId')
                setUser({})
-            }}>Logout</span>{' | '}
+                }}>Logout</span>
             </span>       
             :
             <span>
-            <Link to="/signup">Sign Up</Link>{' | '}
-            <Link to="/login">Login</Link>
+                <span className="navLinks">
+                <Link to="/signup">Sign Up</Link>
+                </span>
+                <span className="navLinks">
+                <Link to="/login">Login</Link>
+                </span>
             </span>
             }
         </nav>

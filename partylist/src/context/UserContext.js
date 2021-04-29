@@ -9,7 +9,7 @@ import axios from 'axios'
      const fetchUser = () => {
          const userId = localStorage.getItem('userId')
          if (userId) {
-             axios.get(`${process.env.REACT_APP_BACKEND}/user/verify`, {
+             axios.get(`${process.env.REACT_APP_BACKEND}/users/verify`, {
                  headers: {
                      authorization: userId
                  }
