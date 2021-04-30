@@ -1,9 +1,12 @@
+import ListingsList from '../components/ListingsList'
+
 const MyListings = () => {
     return (
         <div>
-            My listings page
+                <ListingsList route="/listings/my"/>
         </div>
     )
 }
+
 
 export default MyListings

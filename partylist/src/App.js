@@ -7,6 +7,7 @@ import {Route, Redirect} from 'react-router-dom'
 import AllListings from './pages/AllListings';
 import MyListings from './pages/MyListings';
 import CreateListing from './pages/CreateListing';
+import SingleListing from './pages/SingleListing';
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import SocialFollow from "./components/SocialFollow"
@@ -52,6 +53,14 @@ function App() {
       <Route path="/create" exact
         render={() => {
           return <CreateListing />
+        }}
+      />
+      <Route
+        path="/listings/:id"
+        exact
+        render={(routingInfo) => {
+          return <SingleListing id={routingInfo.match.params.id} />
+          // return <SingleListing />
         }}
       />
       

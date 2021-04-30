@@ -27,13 +27,13 @@ const Login = () => {
     <div className="loginPage">
     { shouldRedirect && <Redirect to={`/`} exact /> }
      <form className ="loginForm" onSubmit={loginForm}>
-        
-             <label htmlFor="email">Email:</label>
-             <input value={email} onChange ={(e) => setEmail(e.target.value)} />
+          <h2>Login</h2>
+           
+             <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
        
         
-             <label htmlFor="password">Password:</label>
-             <input value={password} onChange ={(e) => setPassword(e.target.value)} />
+           
+             <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
        
         
              <input className="button" type="submit" value = "Login!"/>

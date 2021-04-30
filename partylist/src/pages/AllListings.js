@@ -1,7 +1,9 @@
+import ListingsList from '../components/ListingsList'
+
 const AllListings = () => {
     return (
         <div>
-            All listings page
+                <ListingsList route="/listings"/>
         </div>
     )
 }

@@ -27,21 +27,22 @@ const Signup = () => {
     return (
       <div className="signupPage">
         { shouldRedirect && <Redirect to={`/`} exact /> }
+       
        <form className="signupForm" onSubmit={submitForm}>
-           
-               <label htmlFor="name">Name:</label>
-               <input value={name} onChange ={(e) => setName(e.target.value)} />
-           
-          
-               <label htmlFor="email">Email:</label>
-               <input value={email} onChange ={(e) => setEmail(e.target.value)} />
+          <h2>Sign up</h2> 
+               
+               <input className="inputForm" placeholder="Name" value={name} onChange ={(e) => setName(e.target.value)} />
            
           
-               <label htmlFor="password">Password:</label>
-               <input value={password} onChange ={(e) => setPassword(e.target.value)} />
+            
+               <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
            
           
-               <input className="button" type="submit" value = "Sign Up!"/>
+              
+               <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
+           
+          
+               <input className="button" type="submit" value = "Sign Up"/> 
            
        </form>
       </div>
