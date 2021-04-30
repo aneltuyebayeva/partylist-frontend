@@ -33,14 +33,15 @@
 
   .navbar {
       text-align: end;
-      padding: 30px;
-     
+      padding: 20px;
+      background-color: #e77a30;
   }
 
-  .navLinks {
+  .navLinks a {
       padding: 20px;
       font-family: 'Alegreya Sans', sans-serif;
       font-size: 20px;
+      color: white;
   }
 
   .categoriesContainer{
@@ -50,24 +51,25 @@
       align-items: center;
       justify-content: space-evenly;
       font-family: 'Alegreya Sans', sans-serif;
-      height: 500px;
-    width: 100%;
+      height: 600px;
+      width: 100%;
   }
 
   .categories {
       border: 1px solid black;
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
       margin: 10px;
   }
 
   .categoriesTitle {
       text-align: center;
       font-family: 'Alegreya Sans', sans-serif;
+      margin-top: 80px;
   }
 
   .homePage {
-    border: 1px solid black;
+   
     height: 500px;
     width: 100%;
     font-family: 'Alegreya Sans', sans-serif;
