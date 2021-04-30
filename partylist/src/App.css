@@ -168,6 +168,16 @@
   }
 
   .social-container {
-    background: #eee;
-    padding: 25px 50px;
+    padding: 25px -1px;
+  }
+
+  .listingNavLinks {
+    margin-top: 40px;
+  }
+
+  .singleListingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
