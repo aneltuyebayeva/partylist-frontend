@@ -32,16 +32,8 @@ const Signup = () => {
           <h2>Sign up</h2> 
                
                <input className="inputForm" placeholder="Name" value={name} onChange ={(e) => setName(e.target.value)} />
-           
-          
-            
                <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
-           
-          
-              
                <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-           
-          
                <input className="button" type="submit" value = "Sign Up"/> 
            
        </form>

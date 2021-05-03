@@ -23,11 +23,11 @@ const ListingsList = (props) => {
   useEffect(fetchAllListings, [user])
   
   return (
-    <ul>
+    <div className="listingsList">
       {
         allListings.length ? 
         allListings.map((listing) => {
-          return <div>
+          return <div className="singleListing">
             <span key={listing.id}>
             <Link to={`/listings/${listing.id}`}>{listing.title}</Link>
             </span>
@@ -39,7 +39,7 @@ const ListingsList = (props) => {
         :
         <p>Loading...</p>
       }
-    </ul>
+    </div>
   )
 }
 

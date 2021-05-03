@@ -30,12 +30,7 @@ const Login = () => {
           <h2>Login</h2>
            
              <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
-       
-        
-           
              <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-       
-        
              <input className="button" type="submit" value = "Login!"/>
          
      </form>

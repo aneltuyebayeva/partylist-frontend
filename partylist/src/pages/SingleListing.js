@@ -31,20 +31,20 @@ const SingleListing = (props) => {
     return (
         <div>
             <div className="listingNavLinks">
-                <Link to={`/mylistings`}><button onClick = {() =>(
+                <Link to={`/mylistings`}><button className="listingButton" onClick = {() =>(
                  axios.delete (`${process.env.REACT_APP_BACKEND_URL}/listings/${props.id}`).then
                  ((response) =>{
                     console.log(response)
                  })
                 )}>Delete</button></Link>
-                <Link to={`/mylistings/${props.id}/edit`}><button>Edit</button></Link>
+                <Link to={`/mylistings/${props.id}/edit`}><button className="listingButton">Update</button></Link>
                 </div>
             <div className="singleListingContainer">
-            <h2>Title: {listing.title}</h2>
+            <h2>{listing.title}</h2>
             <img src={listing.image}/>
-            <p>Description: {listing.description}</p>
-            <p>Website: {listing.website}</p>
-            <div class="social-container">
+            <p>{listing.description}</p>
+            <a href={listing.website}>Website: {listing.website}</a>
+            <div className="social-container">
             <a href={listing.instagram} className="instagram social"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
             <a href={listing.facebook} className="facebook social"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
             </div>
