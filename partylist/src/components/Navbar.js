@@ -9,7 +9,10 @@ const Navbar = () => {
 
 
     return (
+        <div className="headerSection">
+            <span className="homeTitle">Partylist</span>
         <nav className="navbar">
+           
             <span className="navLinks">
             <Link to="/">Home</Link>
             </span>
@@ -40,6 +43,8 @@ const Navbar = () => {
             </span>
             }
         </nav>
+        </div>
+        
     ) 
  }
     

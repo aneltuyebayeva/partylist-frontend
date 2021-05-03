@@ -11,7 +11,8 @@ import SingleListing from './pages/SingleListing';
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import SocialFollow from "./components/SocialFollow"
-import EditListing from './pages/EditListing';
+import EditForm from "./components/EditForm"
+import ReviewForm from "./components/ReviewForm"
 
 function App() {
 
@@ -68,9 +69,17 @@ function App() {
         path="/mylistings/:id/edit"
         exact
         render={(routingInfo) => {
-          return <EditListing id={routingInfo.match.params.id} />
+          return <EditForm id={routingInfo.match.params.id} />
         }}
       />  
+
+      <Route
+        path="/listings/:id/reviews"
+        exact
+        render={(routingInfo) => {
+          return <ReviewForm id={routingInfo.match.params.id} />
+        }}
+      /> 
       
     </div>
   );

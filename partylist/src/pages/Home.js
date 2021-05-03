@@ -2,7 +2,9 @@
 const Home = () => {
     return (
     <div>
-        <div className="homePage"></div>
+        <div className="homePage">
+            
+        </div>
         <div className="lineSection"></div>
         <div className="categoriesSection">
             <div className="categoriesTitle">

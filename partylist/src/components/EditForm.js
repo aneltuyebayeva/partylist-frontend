@@ -16,6 +16,22 @@ const EditForm = (props) => {
       facebook: ''
     })
 
+    const fetchSingleListing = () => {
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/listings/${props.id}`,{
+          headers: {
+            Authorization: user.id
+          }
+        })
+        .then((response) => {
+        console.log(response.data)
+         setListing(response.data.listing) 
+        })
+       }
+      
+    useEffect(fetchSingleListing, [])
+
+
+
     const handleChange = (e) => {
         const { name, value } = e.target
         setListing({
@@ -32,14 +48,14 @@ const EditForm = (props) => {
             Authorization: user.id
           }
         }).then((response) => {
-          console.log(response);
+          console.log(response.data);
           setShouldRedirect(response.data.listing.id)
         })
       }
 
     return (
         <div className="createPage">
-        { shouldRedirect && <Redirect to={`/mylistings/${shouldRedirect}`} /> }
+        { shouldRedirect && <Redirect to={`${shouldRedirect}`} /> }
   
         <form className="createForm" onSubmit={handleSubmit}>
           
