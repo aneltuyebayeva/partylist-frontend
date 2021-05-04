@@ -37,7 +37,7 @@ const ListingsList = (props) => {
 
         })
         :
-        <p>Loading...</p>
+        <p>You haven't created any listings yet.</p>
       }
     </div>
   )

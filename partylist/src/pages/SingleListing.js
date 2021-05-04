@@ -15,6 +15,7 @@ const SingleListing = (props) => {
     const { userState, fetchUser } = useContext(UserContext)
     const [user, setUser] = userState
     const [shouldRedirect, setShouldRedirect] = useState(null)
+    const [shouldReload, setShouldReload] = useState(true)
     
 
     const fetchSingleListing = () => {
@@ -26,14 +27,21 @@ const SingleListing = (props) => {
         .then((response) => {
         console.log(response.data)
          setListing(response.data.listing) 
+         setShouldReload(false)
         })
        }
       
     useEffect(fetchSingleListing, [])
+    useEffect(fetchSingleListing, [shouldReload])
+
+    const isCreator = () => {
+      return listing.user && listing.user.email === user.email
+    }
 
     return (
         <div>
           { shouldRedirect && <Redirect to={shouldRedirect} /> }
+          { isCreator() && 
             <div className="listingNavLinks">
                 <Link to={`/mylistings`}><button className="listingButton" onClick = {() =>(
                  axios.delete (`${process.env.REACT_APP_BACKEND_URL}/listings/${props.id}`, {
@@ -46,6 +54,7 @@ const SingleListing = (props) => {
                 )}>Delete</button></Link>
                 <Link to={`/mylistings/${props.id}/edit`}><button className="listingButton">Update</button></Link>
                 </div>
+              }
             <div className="singleListingContainer">
             <h2>{listing.title}</h2>
             <div className="singleListingImage">
@@ -63,7 +72,7 @@ const SingleListing = (props) => {
             <Link to={`/listings/${props.id}/reviews`}><button className="reviewButton">Write a review</button></Link>
             </div>
             <div className="allReviewContainer">
-             <AllReviews listingId={props.id}/> 
+             <AllReviews listingId={props.id} setShouldReload={setShouldReload}/> 
             </div>
         </div>
     )
