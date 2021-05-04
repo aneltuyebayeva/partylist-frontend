@@ -316,12 +316,26 @@
   border: 1px solid #A2ABCE; 
 }
 
+.logo {
+  position: absolute;
+  margin-top: 10px;
+}
+
 .homeTitle {
   text-align: center;
   font-family: 'Oleo Script', cursive;
   position: relative;
   font-size: 20px;
   margin-left: 10px;
+  color: #F5631A;
+  font-size: 30px;
+  
+}
+
+
+
+.cakesTitle {
+  position: relative;
 }
 
 

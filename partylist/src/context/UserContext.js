@@ -14,7 +14,12 @@ import axios from 'axios'
                  headers: {
                      authorization: userId
                  }
-             }).then((response) => setUser(response.data.user))
+             }).then((response) => {
+                 console.log(response)
+                 setUser(response.data.user)
+            })
+
+
          }
      }
 

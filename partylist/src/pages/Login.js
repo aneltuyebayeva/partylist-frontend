@@ -7,7 +7,7 @@ import { useContext } from 'react'
 const Login = () => {
   const [email, setEmail] = useState ('')
   const [password, setPassword] = useState ('')
-  const { userState } = useContext(UserContext)
+  const { userState, fetchUser} = useContext(UserContext)
   const [user, setUser] = userState
   const [shouldRedirect, setShouldRedirect] = useState(false)
 
@@ -17,8 +17,9 @@ const Login = () => {
       axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/login`, {email, password})
       .then((response) => {
           console.log(response)
-          localStorage.setItem('userId', response.data.id)
-          setUser(response.data)
+          localStorage.setItem('userId', response.data.userId)
+          fetchUser()
+          // setUser(response.data)
           setShouldRedirect(true)
       })
   }

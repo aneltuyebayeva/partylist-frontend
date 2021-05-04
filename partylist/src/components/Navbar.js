@@ -10,8 +10,12 @@ const Navbar = () => {
 
     return (
         <div className="headerSection">
-            <span className="homeTitle">Partylist</span>
-        <nav className="navbar">
+            <div className="logo">
+                <span className="homeTitle">Partylist</span>
+            </div>
+            
+            <div>
+            <nav className="navbar">
            
             <span className="navLinks">
             <Link to="/">Home</Link>
@@ -42,7 +46,8 @@ const Navbar = () => {
                 </span>
             </span>
             }
-        </nav>
+            </nav>
+            </div>
         </div>
         
     ) 

@@ -8,7 +8,6 @@ import {
     faInstagram
   } from "@fortawesome/free-brands-svg-icons";
 import AllReviews from '../components/AllReviews'
-import ReviewForm from '../components/ReviewForm';
 
 const SingleListing = (props) => {
     const [listing, setListing] = useState ({})
@@ -34,14 +33,16 @@ const SingleListing = (props) => {
     useEffect(fetchSingleListing, [])
     useEffect(fetchSingleListing, [shouldReload])
 
-    const isCreator = () => {
-      return listing.user && listing.user.email === user.email
-    }
-
+    // const isCreator = () => {
+      
+    //   return listing.user && listing.user.email === user.email
+      
+    // }
+    
     return (
         <div>
           { shouldRedirect && <Redirect to={shouldRedirect} /> }
-          { isCreator() && 
+          {/* { isCreator() &&  */}
             <div className="listingNavLinks">
                 <Link to={`/mylistings`}><button className="listingButton" onClick = {() =>(
                  axios.delete (`${process.env.REACT_APP_BACKEND_URL}/listings/${props.id}`, {
@@ -54,7 +55,7 @@ const SingleListing = (props) => {
                 )}>Delete</button></Link>
                 <Link to={`/mylistings/${props.id}/edit`}><button className="listingButton">Update</button></Link>
                 </div>
-              }
+              {/* } */}
             <div className="singleListingContainer">
             <h2>{listing.title}</h2>
             <div className="singleListingImage">
