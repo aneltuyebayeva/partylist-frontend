@@ -18,8 +18,6 @@ import axios from 'axios'
                  console.log(response)
                  setUser(response.data.user)
             })
-
-
          }
      }
 

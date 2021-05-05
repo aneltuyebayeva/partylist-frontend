@@ -37,10 +37,12 @@ const ListingForm = () => {
         })
       }
 
+       if  (shouldRedirect) {
+        return <Redirect to={`/listings/${shouldRedirect}`} /> 
+       } 
+
     return (
         <div className="createPage">
-        { shouldRedirect && <Redirect to={`/mylistings/${shouldRedirect}`} /> }
-  
         <form className="createForm" onSubmit={handleSubmit}>
           
             <input name="title" className="inputForm" placeholder="Title" value={listing.title} onChange={handleChange} />

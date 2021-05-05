@@ -1,12 +1,15 @@
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import { useContext } from 'react'
 import { UserContext } from '../context/UserContext'
 
 const Navbar = () => {
     const { userState } = useContext(UserContext)
     const [user, setUser] = userState
+    let history = useHistory()
 
-
+    const returnHome = () => {
+        history.push("/")
+    }
 
     return (
         <div className="headerSection">
@@ -34,6 +37,7 @@ const Navbar = () => {
                 <span className="navLinks" onClick ={() => {
                localStorage.removeItem('userId')
                setUser({})
+               returnHome()
                 }}>Logout</span>
             </span>       
             :

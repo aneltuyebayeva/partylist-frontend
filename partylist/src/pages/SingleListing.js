@@ -15,6 +15,7 @@ const SingleListing = (props) => {
     const [user, setUser] = userState
     const [shouldRedirect, setShouldRedirect] = useState(null)
     const [shouldReload, setShouldReload] = useState(true)
+    const [creator, setCreator] = useState(false)
     
 
     const fetchSingleListing = () => {
@@ -27,22 +28,26 @@ const SingleListing = (props) => {
         console.log(response.data)
          setListing(response.data.listing) 
          setShouldReload(false)
+         isCreator()
         })
        }
       
     useEffect(fetchSingleListing, [])
     useEffect(fetchSingleListing, [shouldReload])
 
-    // const isCreator = () => {
+    const isCreator = () => {
       
-    //   return listing.user && listing.user.email === user.email
+      if (listing.userId && listing.userId === user.id) {
+       setCreator(true) 
+      } 
       
-    // }
-    
+    }
+
+
     return (
         <div>
           { shouldRedirect && <Redirect to={shouldRedirect} /> }
-          {/* { isCreator() &&  */}
+          { creator && 
             <div className="listingNavLinks">
                 <Link to={`/mylistings`}><button className="listingButton" onClick = {() =>(
                  axios.delete (`${process.env.REACT_APP_BACKEND_URL}/listings/${props.id}`, {
@@ -55,7 +60,7 @@ const SingleListing = (props) => {
                 )}>Delete</button></Link>
                 <Link to={`/mylistings/${props.id}/edit`}><button className="listingButton">Update</button></Link>
                 </div>
-              {/* } */}
+            }
             <div className="singleListingContainer">
             <h2>{listing.title}</h2>
             <div className="singleListingImage">

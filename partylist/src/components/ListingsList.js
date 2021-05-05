@@ -20,7 +20,7 @@ const ListingsList = (props) => {
       setAllListings(response.data.listing)
     })
   }
-  useEffect(fetchAllListings, [user])
+  useEffect(fetchAllListings, [])
   
   return (
     <div className="listingsList">
