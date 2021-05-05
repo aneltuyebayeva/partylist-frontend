@@ -50,6 +50,10 @@
       margin-bottom: 20px;
   }
 
+  .categoriesContainer h3 {
+    text-align: center;
+}
+
   .categories {
       border: 1px solid black;
       height: 230px;

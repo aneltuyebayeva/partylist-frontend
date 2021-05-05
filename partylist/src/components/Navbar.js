@@ -34,11 +34,14 @@ const Navbar = () => {
                 <span className="navLinks">
                 <Link to="/create">Create</Link>
                 </span>
-                <span className="navLinks" onClick ={() => {
-               localStorage.removeItem('userId')
-               setUser({})
-               returnHome()
-                }}>Logout</span>
+                <span className="navLinks">
+                <Link to=" " onClick ={(e) => {
+                    e.preventDefault()
+                    localStorage.removeItem('userId')
+                    setUser({})
+                    returnHome()
+                }}>Logout</Link>
+                </span>
             </span>       
             :
             <span>

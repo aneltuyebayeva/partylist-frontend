@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import {useState, useEffect, useContext} from 'react'
+import {useContext} from 'react'
 import {UserContext} from './context/UserContext'
 import {Route, Redirect} from 'react-router-dom'
 import AllListings from './pages/AllListings';
@@ -10,7 +10,6 @@ import CreateListing from './pages/CreateListing';
 import SingleListing from './pages/SingleListing';
 import Signup from './pages/Signup'
 import Login from './pages/Login'
-import SocialFollow from "./components/SocialFollow"
 import EditForm from "./components/EditForm"
 import ReviewForm from "./components/ReviewForm"
 

@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router'
 import { UserContext } from '../context/UserContext'
@@ -32,9 +32,12 @@ const ReviewForm = (props) => {
         })
       }
 
+      if  (shouldRedirect) {
+        return <Redirect to={`/listings/${shouldRedirect}`} /> 
+       } 
+
     return (
         <div className="createReviewPage">
-        { shouldRedirect && <Redirect to={`/mylistings/${shouldRedirect}`} /> }
   
         <form className="createReviewForm" onSubmit={handleSubmit}>
           

@@ -53,9 +53,13 @@ const EditForm = (props) => {
         })
       }
 
+
+      if  (shouldRedirect) {
+        return <Redirect to={`/listings/${shouldRedirect}`} /> 
+       } 
+
     return (
         <div className="createPage">
-        { shouldRedirect && <Redirect to={`${shouldRedirect}`} /> }
   
         <form className="createForm" onSubmit={handleSubmit}>
           
